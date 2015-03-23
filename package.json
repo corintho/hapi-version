@@ -1,0 +1,29 @@
+{
+  "name": "hapi-version",
+  "version": "1.0.0",
+  "description": "Hapi route versioning using custom header",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha",
+    "coverage": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha",
+    "watch": "node node_modules/mocha/bin/mocha --watch"
+  },
+  "keywords": [
+    "hapi",
+    "versioning"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "chai": "^2.1.2",
+    "hapi": "^8.4.0",
+    "istanbul": "^0.3.9",
+    "jscoverage": "^0.5.9",
+    "mocha": "^2.2.1"
+  },
+  "dependencies": {
+    "boom": "^2.6.1",
+    "semver": "^4.3.1"
+  }
+}
