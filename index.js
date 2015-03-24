@@ -6,7 +6,7 @@ module.exports.register = function(server, options, next) {
 
   };
 
-  server.ext('onPostHandler', function(request, reply) {
+  server.ext('onPreHandler', function(request, reply) {
     var versions = request.route.settings.plugins.versions,
         selectedOption = null,
         version = request.headers['accept-version'];
