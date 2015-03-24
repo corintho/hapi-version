@@ -2,6 +2,8 @@ var async = require('async'),
     expect = require('chai').expect,
     server = require('./utils/server'),
     serverVersioned = require('./utils/server-versioned'),
+    serverCustomError = require('./utils/server-custom-error'),
+    serverStandardError = require('./utils/server-standard-error'),
     Lab = require('lab'),
     lab = exports.lab = Lab.script();
 
@@ -25,7 +27,7 @@ function validateResponse(response, status, message) {
   /*jshint -W041 */
   if(message != null) {
     expect(response.result).to.be.a(typeof(message));
-    expect(response.result).to.be.equal(message);
+    expect(response.result).to.deep.equal(message);
   }
 }
 
@@ -146,5 +148,17 @@ lab.experiment('Versioning', function(){
     ], done);
   });
 
-  lab.test('should allow custom error response');
+  lab.test('should allow custom error response', function(done) {
+    serverCustomError.inject(buildOptions('2.5.0'), function(response){
+      validateResponse(response, 499, {statusCode: 499, error: 'Unknown', message: 'This is not the page you are looking for'});
+      done();
+    });
+  });
+
+  lab.test('should allow standard error response', function(done) {
+    serverStandardError.inject(buildOptions('2.5.0'), function(response){
+      validateResponse(response, 500, {statusCode: 500, error: 'Internal Server Error', message: 'An internal server error occurred'});
+      done();
+    });
+  });
 });

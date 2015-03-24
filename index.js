@@ -3,8 +3,17 @@ var boom = require('boom'),
 
 module.exports.register = function(server, options, next) {
   var defaults = {
-    header: options.header || 'accept-version'
+    header: options.header || 'accept-version',
+    error: {
+      status: 400,
+      message: null
+    }
   };
+  
+  if(options.error) {
+    defaults.error.status = options.error.status || defaults.error.status;
+    defaults.error.message = options.error.message || defaults.error.message;
+  }
   
   defaults.header = defaults.header.toLowerCase();
 
@@ -35,7 +44,7 @@ module.exports.register = function(server, options, next) {
       selectedOption(request, reply);
     //No match
     } else {
-      reply(boom.badRequest());
+      return reply(boom.create(defaults.error.status, defaults.error.message));
     }
   });
 
