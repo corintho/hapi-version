@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/corintho/hapi-version.svg?branch=master)](https://travis-ci.org/corintho/hapi-version)
+[![Coverage Status](https://coveralls.io/repos/corintho/hapi-version/badge.svg?branch=master)](https://coveralls.io/r/corintho/hapi-version?branch=master)
+[![Dependency Status](https://gemnasium.com/corintho/hapi-version.svg)](https://gemnasium.com/corintho/hapi-version)
+
+[![NPM](https://nodei.co/npm/hapi-version.png)](https://nodei.co/npm/hapi-version/)
 ### Description
 
 This package allows a simple versioning scheme to be applied with Hapi servers.
