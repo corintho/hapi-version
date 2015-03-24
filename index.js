@@ -35,7 +35,7 @@ module.exports.register = function(server, options, next) {
       selectedOption(request, reply);
     //No match
     } else {
-      reply(boom.preconditionFailed());
+      reply(boom.badRequest());
     }
   });
 

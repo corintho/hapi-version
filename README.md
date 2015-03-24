@@ -41,7 +41,7 @@ server.route({
 ```
 curl --header "Accept-Version: 2.0.0" <host_url>/versioned
 ```
-- If the requested version cannot be matched in the service, a 412 response (Precondition failed) is returned
+- If the requested version cannot be matched in the service, a `400` response (Bad Request) is returned
 
 ### Advanced usage
 More details on the project wiki.

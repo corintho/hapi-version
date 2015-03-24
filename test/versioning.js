@@ -70,7 +70,7 @@ lab.experiment('Versioning', function(){
   lab.test('should error on invalid version', function(done) {
     server.inject(buildOptions('4.0.0'), function(response){
       var result = response.result;
-      validateResponse(response, 412);
+      validateResponse(response, 400);
       done();
     });
   });
@@ -103,13 +103,13 @@ lab.experiment('Versioning', function(){
       },
       function(done) {
         server.inject(buildOptions('1.5.0', '/semver'), function(response){
-          validateResponse(response, 412);
+          validateResponse(response, 400);
           done();
         });
       },
       function(done) {
         server.inject(buildOptions('2.5.0', '/semver'), function(response){
-          validateResponse(response, 412);
+          validateResponse(response, 400);
           done();
         });
       }
@@ -139,7 +139,7 @@ lab.experiment('Versioning', function(){
       },
       function(done) {
         serverVersioned.inject(buildOptions('3.0.0', null, 'custom-name'), function(response){
-          validateResponse(response, 412);
+          validateResponse(response, 400);
           done();
         });
       }
