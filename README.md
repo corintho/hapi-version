@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/corintho/hapi-version.svg?branch=master)](https://travis-ci.org/corintho/hapi-version)
-[![Coverage Status](https://coveralls.io/repos/corintho/hapi-version/badge.svg?branch=master)](https://coveralls.io/r/corintho/hapi-version?branch=master)
-[![Dependency Status](https://gemnasium.com/corintho/hapi-version.svg)](https://gemnasium.com/corintho/hapi-version)
+[![Build Status](https://travis-ci.org/corintho/hapi-version.svg?branch=master)](https://travis-ci.org/corintho/hapi-version) [![Coverage Status](https://coveralls.io/repos/corintho/hapi-version/badge.svg?branch=master)](https://coveralls.io/r/corintho/hapi-version?branch=master) [![Dependency Status](https://gemnasium.com/corintho/hapi-version.svg)](https://gemnasium.com/corintho/hapi-version)
 
 [![NPM](https://nodei.co/npm/hapi-version.png)](https://nodei.co/npm/hapi-version/)
 ### Description
@@ -8,8 +6,8 @@
 This package allows a simple versioning scheme to be applied with Hapi servers.
 
 ### Usage
-1. Install package with: `npm install --save hapi-version`
-1. Include it as a requirement for your server
+- Install package with: `npm install --save hapi-version`
+- Include it as a requirement for your server
 ```
 server.register({
   register: require('hapi-version')
@@ -19,7 +17,7 @@ server.register({
   }
 });
 ```
-1. Declare your routes to have version information
+- Declare your routes to have version information
 ```
 server.route({
   method: 'GET',
@@ -39,7 +37,7 @@ server.route({
   }
 });
 ```
-1. When sending requests, include an 'Accept-Version' header with the proper version
+- When sending requests, include an 'Accept-Version' header with the proper version
 ```
 curl --header "Accept-Version: 2.0.0" <host_url>/versioned
 ```
