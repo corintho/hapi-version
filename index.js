@@ -3,13 +3,15 @@ var boom = require('boom'),
 
 module.exports.register = function(server, options, next) {
   var defaults = {
-
+    header: options.header || 'accept-version'
   };
+  
+  defaults.header = defaults.header.toLowerCase();
 
   server.ext('onPreHandler', function(request, reply) {
     var versions = request.route.settings.plugins.versions,
         selectedOption = null,
-        version = request.headers['accept-version'];
+        version = request.headers[defaults.header];
     if(!version || !versions) {
       return reply.continue();
     }

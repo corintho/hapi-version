@@ -5,7 +5,7 @@
 
 This package allows a simple versioning scheme to be applied with Hapi servers.
 
-### Usage
+### Basic Usage
 - Install package with: `npm install --save hapi-version`
 - Include it as a requirement for your server
 ```
@@ -41,16 +41,16 @@ server.route({
 ```
 curl --header "Accept-Version: 2.0.0" <host_url>/versioned
 ```
+- If the requested version cannot be matched in the service, a 412 response (Precondition failed) is returned
 
+### Advanced usage
+More details on the project wiki.
 
-### Matching with semver
-**TODO**
-
-*For now, take a look at the tests*
+*Also, a look on the tests source code can be very enlightening*
 
 
 ### Running from source
 - Check out the repository
-- Run `npm test` to run the [mocha](https://www.npmjs.com/package/mocha) test suite once
-- Run `npm run coverage` to generate the [istanbul](https://www.npmjs.com/package/istanbul) coverage report
-- Run `npm run watch` to run [mocha](https://www.npmjs.com/package/mocha) continually listening to changes in source code and running tests automatically
+- Use `npm test` to run the [Lab](https://www.npmjs.com/package/lab) test suite, including overall coverage statistics
+- Use `npm run coverage` to generate the [Lab](https://www.npmjs.com/package/lab) coverage report written to `coverage.html` file
+- Use `npm run watch` continuously run the tests while editing the source code. It requires [nodemon](https://www.npmjs.com/package/nodemon) to be installed globally

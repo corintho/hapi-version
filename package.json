@@ -4,10 +4,10 @@
   "description": "Hapi route versioning using custom header",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha",
-    "coverage": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha",
-    "watch": "node node_modules/mocha/bin/mocha --watch",
-    "coveralls": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "test": "node node_modules/lab/bin/lab -c -t 100",
+    "coverage": "node node_modules/lab/bin/lab -r html -o coverage.html",
+    "watch": "nodemon --exec npm test",
+    "coveralls": "lab -r lcov | ./node_modules/.bin/coveralls"
   },
   "keywords": [
     "hapi",
@@ -23,12 +23,11 @@
   "author": "Corintho Assunção <corintho.filho@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "async": "^0.9.0",
     "chai": "^2.1.2",
     "coveralls": "^2.11.2",
     "hapi": "^8.4.0",
-    "istanbul": "^0.3.9",
-    "mocha": "^2.2.1",
-    "mocha-lcov-reporter": "0.0.2"
+    "lab": "^5.5.1"
   },
   "dependencies": {
     "boom": "^2.6.1",
