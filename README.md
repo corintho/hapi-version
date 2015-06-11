@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/corintho/hapi-version.svg?branch=master)](https://travis-ci.org/corintho/hapi-version) [![Coverage Status](https://coveralls.io/repos/corintho/hapi-version/badge.svg?branch=master)](https://coveralls.io/r/corintho/hapi-version?branch=master) [![Dependency Status](https://gemnasium.com/corintho/hapi-version.svg)](https://gemnasium.com/corintho/hapi-version)
 
+[ ![Codeship Status for corintho/hapi-version](https://codeship.com/projects/42b6aef0-f2ba-0132-1e75-5ed004d44c71/status?branch=master)](https://codeship.com/projects/85263)
+
 [![NPM](https://nodei.co/npm/hapi-version.png)](https://nodei.co/npm/hapi-version/)
 ### Description
 
