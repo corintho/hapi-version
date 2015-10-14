@@ -23,14 +23,14 @@
   "author": "Corintho Assunção <corintho.filho@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "async": "^0.9.0",
-    "chai": "^2.1.2",
+    "async": "^1.4.2",
+    "chai": "^3.3.0",
     "coveralls": "^2.11.2",
-    "hapi": "^8.4.0",
-    "lab": "^5.5.1"
+    "hapi": "^10.4.1",
+    "lab": "^6.2.0"
   },
   "dependencies": {
     "boom": "^2.6.1",
-    "semver": "^4.3.1"
+    "semver": "^5.0.3"
   }
 }
