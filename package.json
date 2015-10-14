@@ -1,6 +1,6 @@
 {
   "name": "hapi-version",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Hapi route versioning using custom header",
   "main": "index.js",
   "scripts": {
