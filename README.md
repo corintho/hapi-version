@@ -5,6 +5,8 @@
 [![NPM](https://nodei.co/npm/hapi-version.png)](https://nodei.co/npm/hapi-version/)
 ### Description
 
+[![Join the chat at https://gitter.im/corintho/hapi-version](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/corintho/hapi-version?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This package allows a simple versioning scheme to be applied with Hapi servers.
 
 ### Basic Usage
