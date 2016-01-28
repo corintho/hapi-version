@@ -24,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "async": "^1.4.2",
-    "chai": "^3.4.0",
+    "chai": "^3.5.0",
     "coveralls": "^2.11.2",
     "hapi": "^11.0.2",
     "lab": "^6.2.0"
