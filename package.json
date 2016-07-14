@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "boom": "^2.6.1",
-    "semver": "^5.0.3"
+    "semver": "^5.3.0"
   }
 }
