@@ -25,7 +25,7 @@
   "devDependencies": {
     "async": "^1.4.2",
     "chai": "^3.4.0",
-    "coveralls": "^2.11.2",
+    "coveralls": "^2.11.13",
     "hapi": "^11.0.2",
     "lab": "^6.2.0"
   },
