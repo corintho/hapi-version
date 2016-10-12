@@ -23,7 +23,7 @@
   "author": "Corintho Assunção <corintho.filho@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "async": "^1.4.2",
+    "async": "^2.1.0",
     "chai": "^3.4.0",
     "coveralls": "^2.11.2",
     "hapi": "^11.0.2",
